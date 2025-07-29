@@ -26,6 +26,7 @@ struct AppetizerTabsView: View {
                 .tabItem(icon: "person.crop.circle",
                          label: "Account")
         }
+        .accentColor(Color("primaryColor"))
     }
 }
 

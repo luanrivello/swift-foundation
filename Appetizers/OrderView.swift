@@ -24,7 +24,8 @@ struct OrderCell: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             
-            Text("Name").bold()
+            Text("Name")
+                .bold()
             
             Spacer()
             
