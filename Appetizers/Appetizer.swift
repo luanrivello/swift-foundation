@@ -8,7 +8,7 @@
 import Foundation
 
 struct Appetizer: Identifiable, Decodable {
-    let id:             Int
+    var id =            UUID()
     let name:           String
     let description:    String
     let imageURL:       String
@@ -23,7 +23,7 @@ struct AppetizerResponse {
 }
 
 struct MockData {
-    static let appetizerItemOne     = Appetizer(id: 1,
+    static let appetizerItemOne     = Appetizer(
                                            name: "Test Appetizer One",
                                            description: "This is the description for my appetizer. It's yummy.",
                                            imageURL: "",
@@ -32,7 +32,7 @@ struct MockData {
                                            protein: 92,
                                            carbs: 93)
     
-    static let appetizerItemTwo     = Appetizer(id: 2,
+    static let appetizerItemTwo     = Appetizer(
                                            name: "Test Appetizer Two",
                                            description: "This is the description for my appetizer. It's yummy.",
                                            imageURL: "",
@@ -41,7 +41,7 @@ struct MockData {
                                            protein: 93,
                                            carbs: 94)
     
-    static let appetizerItemThree   = Appetizer(id: 3,
+    static let appetizerItemThree   = Appetizer(
                                            name: "Test Appetizer Three",
                                            description: "This is the description for my appetizer. It's yummy.",
                                            imageURL: "",

@@ -30,6 +30,10 @@ struct AppetizerCell: View {
             VStack (alignment: .leading, spacing: 5){
                 Text(appetizer.name).bold()
                 Text("R$ \(appetizer.price, specifier: "%.2f")")
+                Text("\(appetizer.id)")
+                    .font(.caption2)
+                    .lineLimit(1)
+                    .truncationMode(.middle)
             }.padding()
         }
     }
