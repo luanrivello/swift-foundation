@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FB173582E38DB5C0043F480 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173572E38DB5C0043F480 /* MainApp.swift */; };
+		6F7FFA762E3CDD7400F0062E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */; };
+		6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA772E3CDF6800F0062E /* APIError.swift */; };
+		6FB173582E38DB5C0043F480 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173572E38DB5C0043F480 /* AppMain.swift */; };
 		6FB1735A2E38DB5C0043F480 /* AppetizerTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */; };
 		6FB1735C2E38DB5F0043F480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1735B2E38DB5F0043F480 /* Assets.xcassets */; };
 		6FB173602E38DB5F0043F480 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1735F2E38DB5F0043F480 /* Preview Assets.xcassets */; };
@@ -40,8 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6F7FFA772E3CDF6800F0062E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6FB173542E38DB5C0043F480 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FB173572E38DB5C0043F480 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
+		6FB173572E38DB5C0043F480 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabsView.swift; sourceTree = "<group>"; };
 		6FB1735B2E38DB5F0043F480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FB1735D2E38DB5F0043F480 /* Appetizers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Appetizers.entitlements; sourceTree = "<group>"; };
@@ -108,16 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				6FEDBDE92E393D1000AF3698 /* Extensions */,
-				6FB173572E38DB5C0043F480 /* MainApp.swift */,
+				6FB173572E38DB5C0043F480 /* AppMain.swift */,
 				6FB1738C2E38EC670043F480 /* HomeView.swift */,
 				6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */,
 				6FB173862E38E4E30043F480 /* AppetizersListView.swift */,
 				6FB1738A2E38E5380043F480 /* OrderView.swift */,
 				6FB173882E38E5150043F480 /* AccountView.swift */,
+				6FEDBDEC2E39643D00AF3698 /* Appetizer.swift */,
+				6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */,
+				6F7FFA772E3CDF6800F0062E /* APIError.swift */,
 				6FB1735B2E38DB5F0043F480 /* Assets.xcassets */,
 				6FB1735D2E38DB5F0043F480 /* Appetizers.entitlements */,
 				6FB1735E2E38DB5F0043F480 /* Preview Content */,
-				6FEDBDEC2E39643D00AF3698 /* Appetizer.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7FFA762E3CDD7400F0062E /* NetworkManager.swift in Sources */,
 				6FB173892E38E5150043F480 /* AccountView.swift in Sources */,
 				6FB1735A2E38DB5C0043F480 /* AppetizerTabsView.swift in Sources */,
-				6FB173582E38DB5C0043F480 /* MainApp.swift in Sources */,
+				6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */,
+				6FB173582E38DB5C0043F480 /* AppMain.swift in Sources */,
 				6FEDBDEB2E393D5100AF3698 /* View+Extensions.swift in Sources */,
 				6FB1738D2E38EC670043F480 /* HomeView.swift in Sources */,
 				6FB173872E38E4E30043F480 /* AppetizersListView.swift in Sources */,

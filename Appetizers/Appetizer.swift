@@ -8,7 +8,8 @@
 import Foundation
 
 struct Appetizer: Identifiable, Decodable {
-    var id =            UUID()
+    var udid =          UUID()
+    let id:             Int
     let name:           String
     let description:    String
     let imageURL:       String
@@ -18,37 +19,43 @@ struct Appetizer: Identifiable, Decodable {
     let carbs:          Int
 }
 
-struct AppetizerResponse {
-    let request:  [Appetizer]
+struct AppetizersResponse: Decodable {
+    let appetizersList:  [Appetizer]
 }
 
 struct MockData {
     static let appetizerItemOne     = Appetizer(
-                                           name: "Test Appetizer One",
-                                           description: "This is the description for my appetizer. It's yummy.",
-                                           imageURL: "",
-                                           price: 9.91,
-                                           calories: 91,
-                                           protein: 92,
-                                           carbs: 93)
+                                            id: 1,
+                                            name: "Test Appetizer One",
+                                            description: "This is the description for my appetizer. It's yummy.",
+                                            imageURL: "",
+                                            price: 9.91,
+                                            calories: 91,
+                                            protein: 92,
+                                            carbs: 93
+                                        )
     
     static let appetizerItemTwo     = Appetizer(
-                                           name: "Test Appetizer Two",
-                                           description: "This is the description for my appetizer. It's yummy.",
-                                           imageURL: "",
-                                           price: 9.92,
-                                           calories: 92,
-                                           protein: 93,
-                                           carbs: 94)
+                                            id: 2,
+                                            name: "Test Appetizer Two",
+                                            description: "This is the description for my appetizer. It's yummy.",
+                                            imageURL: "",
+                                            price: 9.92,
+                                            calories: 92,
+                                            protein: 93,
+                                            carbs: 94
+                                        )
     
     static let appetizerItemThree   = Appetizer(
-                                           name: "Test Appetizer Three",
-                                           description: "This is the description for my appetizer. It's yummy.",
-                                           imageURL: "",
-                                           price: 9.93,
-                                           calories: 93,
-                                           protein: 94,
-                                           carbs: 95)
+                                            id: 3,
+                                            name: "Test Appetizer Three",
+                                            description: "This is the description for my appetizer. It's yummy.",
+                                            imageURL: "",
+                                            price: 9.93,
+                                            calories: 93,
+                                            protein: 94,
+                                            carbs: 95
+                                        )
     
     static let appetizers       = [appetizerItemOne, appetizerItemTwo, appetizerItemThree]
     
