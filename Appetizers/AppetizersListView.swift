@@ -32,7 +32,7 @@ struct NoConnectionView: View {
             Image(systemName: "globe")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color.primaryColor)
+                .foregroundColor(.primaryColor)
                 .padding(100)
             Text("Loading...").bold().font(.title)
         }.padding(.bottom, 50)
@@ -46,7 +46,7 @@ struct AppetizerCell: View {
         HStack {
             Image(systemName: "fork.knife")
                 .imageScale(.large)
-                .foregroundColor(Color.primaryColor)
+                .foregroundColor(.primaryColor)
             
             VStack (alignment: .leading, spacing: 5){
                 Text(appetizer.name).bold()

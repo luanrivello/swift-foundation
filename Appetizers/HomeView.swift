@@ -13,7 +13,7 @@ struct HomeView: View {
             Image(systemName: "globe")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color.primaryColor)
+                .foregroundColor(.primaryColor)
                 .padding(100)
             Text("Hello, world!").bold().font(.title)
         }.padding(.bottom, 50)
