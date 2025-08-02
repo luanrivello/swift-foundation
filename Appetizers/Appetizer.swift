@@ -8,7 +8,7 @@
 import Foundation
 
 struct Appetizer: Identifiable, Decodable {
-    var udid =          UUID()
+    //var udid =          UUID()
     let id:             Int
     let name:           String
     let description:    String
@@ -20,7 +20,7 @@ struct Appetizer: Identifiable, Decodable {
 }
 
 struct AppetizersResponse: Decodable {
-    let appetizersList:  [Appetizer]
+    let appetizers:  [Appetizer]
 }
 
 struct MockData {
