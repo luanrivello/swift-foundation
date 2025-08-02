@@ -22,7 +22,7 @@ struct OrderCell: View {
         HStack(spacing: 20) {
             Image(systemName: "fork.knife")
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .foregroundColor(Color.primaryColor)
             
             Text("Name")
                 .bold()

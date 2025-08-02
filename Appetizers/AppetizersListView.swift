@@ -18,6 +18,11 @@ struct AppetizersListView: View {
             .navigationTitle("Appetizers")
         }
         .onAppear(perform: viewModel.getAppetizers)
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
+        }
     }
 }
 
@@ -27,7 +32,7 @@ struct NoConnectionView: View {
             Image(systemName: "globe")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.accentColor)
+                .foregroundColor(Color.primaryColor)
                 .padding(100)
             Text("Loading...").bold().font(.title)
         }.padding(.bottom, 50)
@@ -41,7 +46,7 @@ struct AppetizerCell: View {
         HStack {
             Image(systemName: "fork.knife")
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .foregroundColor(Color.primaryColor)
             
             VStack (alignment: .leading, spacing: 5){
                 Text(appetizer.name).bold()

@@ -16,15 +16,15 @@ struct AlertItem: Identifiable {
 
 struct AlertContext {
     static let invalidData      = AlertItem(title:         Text("Server Error"),
-                                            message:       Text("The data received from the server was invalid.\nPlease contact support."),
+                                            message:       Text("The data received from the server was invalid. Please contact support."),
                                             dismissButton: .default(Text("Ok")))
     
     static let invalidResponse  = AlertItem(title:         Text("Server Error"),
-                                            message:       Text("The response received from the server was invalid.\nPlease contact support."),
+                                            message:       Text("The response received from the server was invalid. Please contact support."),
                                             dismissButton: .default(Text("Ok")))
    
     static let invalidURL       = AlertItem(title:         Text("Server Error"),
-                                            message:       Text("There was an issue connecting to thhe server.\nIf this persists, please contact support."),
+                                            message:       Text("There was an issue connecting to thhe server. If this persists, please contact support."),
                                             dismissButton: .default(Text("Ok")))
     
     static let unableToComplete = AlertItem(title:         Text("Server Error"),
@@ -32,11 +32,11 @@ struct AlertContext {
                                             dismissButton: .default(Text("Ok")))
     
     static let requestTimeout   = AlertItem(title:         Text("Server Error"),
-                                            message:       Text("There was an issue connecting to the server.\nPlease try again later."),
+                                            message:       Text("There was an issue connecting to the server. Please try again later."),
                                             dismissButton: .default(Text("Ok")))
     
     static let invalidJson      = AlertItem(title:         Text("Server Error"),
-                                            message:       Text("The data information received from the server was invalid.\nPlease contact support."),
+                                            message:       Text("The data information received from the server was invalid. Please contact support."),
                                             dismissButton: .default(Text("Ok")))
     
 }
