@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F5218CF2E3EBDE7000EFBAB /* AppetizersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5218CE2E3EBDE7000EFBAB /* AppetizersListViewModel.swift */; };
+		6F5218D12E3EBF7A000EFBAB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5218D02E3EBF7A000EFBAB /* Alert.swift */; };
 		6F7FFA762E3CDD7400F0062E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */; };
 		6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA772E3CDF6800F0062E /* APIError.swift */; };
 		6FB173582E38DB5C0043F480 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173572E38DB5C0043F480 /* AppMain.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F5218CE2E3EBDE7000EFBAB /* AppetizersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersListViewModel.swift; sourceTree = "<group>"; };
+		6F5218D02E3EBF7A000EFBAB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6F7FFA772E3CDF6800F0062E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6FB173542E38DB5C0043F480 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,7 @@
 				6FB1738C2E38EC670043F480 /* HomeView.swift */,
 				6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */,
 				6FB173862E38E4E30043F480 /* AppetizersListView.swift */,
+				6F5218CE2E3EBDE7000EFBAB /* AppetizersListViewModel.swift */,
 				6FB1738A2E38E5380043F480 /* OrderView.swift */,
 				6FB173882E38E5150043F480 /* AccountView.swift */,
 				6FEDBDEC2E39643D00AF3698 /* Appetizer.swift */,
@@ -124,6 +129,7 @@
 				6FB1735B2E38DB5F0043F480 /* Assets.xcassets */,
 				6FB1735D2E38DB5F0043F480 /* Appetizers.entitlements */,
 				6FB1735E2E38DB5F0043F480 /* Preview Content */,
+				6F5218D02E3EBF7A000EFBAB /* Alert.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
@@ -297,9 +303,11 @@
 				6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */,
 				6FB173582E38DB5C0043F480 /* AppMain.swift in Sources */,
 				6FEDBDEB2E393D5100AF3698 /* View+Extensions.swift in Sources */,
+				6F5218D12E3EBF7A000EFBAB /* Alert.swift in Sources */,
 				6FB1738D2E38EC670043F480 /* HomeView.swift in Sources */,
 				6FB173872E38E4E30043F480 /* AppetizersListView.swift in Sources */,
 				6FEDBDED2E39643D00AF3698 /* Appetizer.swift in Sources */,
+				6F5218CF2E3EBDE7000EFBAB /* AppetizersListViewModel.swift in Sources */,
 				6FB1738B2E38E5380043F480 /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
