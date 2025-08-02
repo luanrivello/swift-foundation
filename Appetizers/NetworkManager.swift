@@ -10,7 +10,7 @@ import Foundation
 final class NetworkManager {
     static let shared = NetworkManager()
     
-    private let baseURL = "https://localhost/"
+    private let baseURL = "http://localhost:8080/"
     private let appetizersPath = "appetizers/"
     
     func getAppetizers(completed: @escaping (Result<[Appetizer], APIError>) -> Void) {
@@ -20,7 +20,7 @@ final class NetworkManager {
             return
         }
         
-        var request = URLRequest(url: appetizersURL, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 30)
+        let request = URLRequest(url: appetizersURL, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 30)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error as? URLError, error.code == .timedOut {
@@ -29,7 +29,7 @@ final class NetworkManager {
                 return
             }
             
-            if let error = error {
+            if let _ = error {
                 self.handleNetworkManagerError(errorOfType: .unableToComplete)
                 completed(.failure(.unableToComplete))
                 return
@@ -51,9 +51,10 @@ final class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(AppetizersResponse.self, from: data)
-                completed(.success(decodedData.appetizersList))
+                completed(.success(decodedData.appetizers))
             } catch {
                 self.handleNetworkManagerError(errorOfType: .invalidJson)
+                print(String(data: data, encoding: .utf8) ?? "NetworkManager: Unable to convert data to string")
                 completed(.failure(.invalidJson))
             }
         }
