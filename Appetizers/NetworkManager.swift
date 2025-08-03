@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 final class NetworkManager {
     static let shared = NetworkManager()
     
     private let baseURL = "http://localhost:8080/"
     private let appetizersPath = "appetizers/"
+    static private let cache = NSCache<NSString, UIImage>()
     
     func getAppetizers(completed: @escaping (Result<[Appetizer], APIError>) -> Void) {
         guard let appetizersURL = URL(string: baseURL + appetizersPath) else {
@@ -64,5 +66,30 @@ final class NetworkManager {
     
     private func handleNetworkManagerError(errorOfType: APIError) {
         print("NetworkManager Error: \(errorOfType)")
+    }
+    
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+        
+        let cacheKey = NSString(string: urlString)
+        if let image = NetworkManager.cache.object(forKey: cacheKey) {
+            completed(image)
+        }
+        
+        guard let url = URL(string: urlString) else {
+            completed(nil)
+            return
+        }
+        
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            guard let data = data, let image = UIImage(data: data) else {
+                completed(nil)
+                return
+            }
+            
+            NetworkManager.cache.setObject(image, forKey: cacheKey)
+        }
+        
+        task.resume()
     }
 }

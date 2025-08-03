@@ -25,23 +25,10 @@ struct AppetizersListView: View {
             }
         }
         .alert(item: $viewModel.alertItem) { alertItem in
-            Alert(title: alertItem.title,
-                  message: alertItem.message,
-                  dismissButton: alertItem.dismissButton)
+            Alert(title:            alertItem.title,
+                  message:          alertItem.message,
+                  dismissButton:    alertItem.dismissButton)
         }
-    }
-}
-
-struct NoConnectionView: View {
-    var body: some View {
-        VStack(spacing: 50) {
-            Image(systemName: "globe")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.primaryColor)
-                .padding(100)
-            Text("Loading...").bold().font(.title)
-        }.padding(.bottom, 50)
     }
 }
 
@@ -50,14 +37,21 @@ struct AppetizerCell: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "fork.knife")
-                .imageScale(.large)
-                .foregroundColor(.primaryColor)
+            AppetizerRemoteImage(urlString: appetizer.imageURL)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 80, height: 80)
+                .cornerRadius(16)
             
             VStack (alignment: .leading, spacing: 5){
                 Text(appetizer.name).bold()
+                    .font(.title3)
+                    .fontWeight(.medium)
+                
                 Text("R$ \(appetizer.price, specifier: "%.2f")")
-            }.padding()
+                    .foregroundColor(.secondary)
+                    .fontWeight(.medium)
+            }
+            .padding(.leading)
         }
     }
 }
