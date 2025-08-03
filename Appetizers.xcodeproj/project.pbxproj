@@ -98,6 +98,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F5219022E3FF083000EFBAB /* AppetizerListViem */ = {
+			isa = PBXGroup;
+			children = (
+				6FB173862E38E4E30043F480 /* AppetizersListView.swift */,
+				6F5218CE2E3EBDE7000EFBAB /* AppetizersListViewModel.swift */,
+			);
+			path = AppetizerListViem;
+			sourceTree = "<group>";
+		};
+		6F5219032E3FF0A6000EFBAB /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				6FB1738C2E38EC670043F480 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		6F5219042E3FF0B0000EFBAB /* OrderView */ = {
+			isa = PBXGroup;
+			children = (
+				6FB1738A2E38E5380043F480 /* OrderView.swift */,
+			);
+			path = OrderView;
+			sourceTree = "<group>";
+		};
+		6F5219052E3FF0F0000EFBAB /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				6FB173882E38E5150043F480 /* AccountView.swift */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		6F5219062E3FF135000EFBAB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6F5219082E3FF188000EFBAB /* NetworkModels */,
+				6F5219072E3FF16F000EFBAB /* Commons */,
+				6FEDBDE92E393D1000AF3698 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6F5219072E3FF16F000EFBAB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				6F5218D42E3ECB6C000EFBAB /* LoadingView.swift */,
+				6F5218D02E3EBF7A000EFBAB /* Alert.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		6F5219082E3FF188000EFBAB /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */,
+				6F5219002E3F9F78000EFBAB /* RemoteImage.swift */,
+				6F7FFA772E3CDF6800F0062E /* APIError.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		6F5219092E3FF1D8000EFBAB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6FEDBDEC2E39643D00AF3698 /* Appetizer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6FB1734B2E38DB5B0043F480 = {
 			isa = PBXGroup;
 			children = (
@@ -121,23 +191,17 @@
 		6FB173562E38DB5C0043F480 /* Appetizers */ = {
 			isa = PBXGroup;
 			children = (
-				6FEDBDE92E393D1000AF3698 /* Extensions */,
 				6FB173572E38DB5C0043F480 /* AppMain.swift */,
-				6FB1738C2E38EC670043F480 /* HomeView.swift */,
 				6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */,
-				6FB173862E38E4E30043F480 /* AppetizersListView.swift */,
-				6F5218CE2E3EBDE7000EFBAB /* AppetizersListViewModel.swift */,
-				6FB1738A2E38E5380043F480 /* OrderView.swift */,
-				6FB173882E38E5150043F480 /* AccountView.swift */,
-				6FEDBDEC2E39643D00AF3698 /* Appetizer.swift */,
-				6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */,
-				6F7FFA772E3CDF6800F0062E /* APIError.swift */,
+				6F5219032E3FF0A6000EFBAB /* HomeView */,
+				6F5219022E3FF083000EFBAB /* AppetizerListViem */,
+				6F5219042E3FF0B0000EFBAB /* OrderView */,
+				6F5219052E3FF0F0000EFBAB /* AccountView */,
+				6F5219092E3FF1D8000EFBAB /* Models */,
+				6F5219062E3FF135000EFBAB /* Utilities */,
 				6FB1735B2E38DB5F0043F480 /* Assets.xcassets */,
 				6FB1735D2E38DB5F0043F480 /* Appetizers.entitlements */,
 				6FB1735E2E38DB5F0043F480 /* Preview Content */,
-				6F5218D02E3EBF7A000EFBAB /* Alert.swift */,
-				6F5218D42E3ECB6C000EFBAB /* LoadingView.swift */,
-				6F5219002E3F9F78000EFBAB /* RemoteImage.swift */,
 			);
 			path = Appetizers;
 			sourceTree = "<group>";
