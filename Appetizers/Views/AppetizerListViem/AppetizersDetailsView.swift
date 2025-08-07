@@ -28,8 +28,8 @@ struct AppetizersDetailsView: View {
             Spacer()
             
             ConfirmButton(
-                action: { print("Added") },
-                textString: "R$\(selectedAppetizer.price, specifier: "%.2f") - Add to Order"
+                textString: "R$\(selectedAppetizer.price, specifier: "%.2f") - Add to Order",
+                action: { print("Added") }
             )
         }
         .frame(width: 300, height: 525)

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ConfirmButton: View {
-    let action: () -> Void
     let textString: LocalizedStringKey
+    let action: () -> Void 
     
     var body: some View {
         Button {
@@ -28,6 +28,6 @@ struct ConfirmButton: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmButton(action: {}, textString: "Test Title")
+        ConfirmButton(textString: "Test Title", action: {})
     }
 }
