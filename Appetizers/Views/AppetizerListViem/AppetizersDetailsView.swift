@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AppetizersDetailsView: View {
+    @EnvironmentObject var order: Order
+    
     var selectedAppetizer: Appetizer
     @Binding var isShowingDetails: Bool
     
@@ -28,8 +30,11 @@ struct AppetizersDetailsView: View {
             Spacer()
             
             ConfirmButton(
-                textString: "R$\(selectedAppetizer.price, specifier: "%.2f") - Add to Order",
-                action: { print("Added") }
+                textString: "Add to Order - R$\(selectedAppetizer.price, specifier: "%.2f")",
+                action: {
+                    order.add(selectedAppetizer)
+                    isShowingDetails = false
+                }
             )
         }
         .frame(width: 300, height: 525)

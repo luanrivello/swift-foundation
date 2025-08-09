@@ -19,14 +19,14 @@ struct AppetizerTabsView: View {
                          label: "List")
             
             OrderView()
-                .tabItem(icon: "dollarsign.circle",
+                .tabItem(icon: "cart.circle.fill",
                          label: "Order")
             
             AccountView()
                 .tabItem(icon: "person.crop.circle",
                          label: "Account")
         }
-        .accentColor(.primaryColor)
+        .accentColor(.brandPrimary)
     }
 }
 

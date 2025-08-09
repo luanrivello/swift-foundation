@@ -28,14 +28,14 @@ struct AccountView: View {
                         Text("Save Changes")
                     }
                 }
-                .tint(.blue)
+                .tint(.brandSecondary)
                 
                 Section(header: Text("Special Conditions")) {
                     Toggle("Lactose Intolerance", isOn: $viewModel.user.isLactoseIntolerant)
                     Toggle("Ciliac Disease", isOn: $viewModel.user.isCiliac)
                     Toggle("Diabetic", isOn: $viewModel.user.isDiabetic)
                 }
-                .toggleStyle(SwitchToggleStyle(tint: .blue))
+                .toggleStyle(SwitchToggleStyle(tint: .brandSecondary))
             }
             .navigationTitle("Account")
         }

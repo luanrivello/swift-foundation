@@ -22,7 +22,7 @@ struct ConfirmButton: View {
         }
         .padding(.bottom, 30)
         .buttonStyle(.borderedProminent)
-        .tint(.blue)
+        .tint(.brandSecondary)
     }
 }
 
