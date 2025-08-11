@@ -27,10 +27,10 @@ struct OrderView: View {
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding()
-                        .padding(.trailing, 30)
                 
                     ConfirmButton(textString: "Place Order", action: {
                         print("Ordered Placed!")
+                        order.items.removeAll()
                     })
                 }
                 
@@ -48,7 +48,7 @@ struct OrderCell: View {
     
     var body: some View {
         HStack {
-            AppetizerRemoteImage(urlString: appetizer.imageURL)
+            RemoteImage(urlString: appetizer.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80)
                 .cornerRadius(16)

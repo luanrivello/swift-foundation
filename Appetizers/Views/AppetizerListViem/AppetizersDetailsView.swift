@@ -16,9 +16,12 @@ struct AppetizersDetailsView: View {
     var body: some View {
         
         VStack {
-            AppetizerRemoteImage(urlString: selectedAppetizer.imageURL)
+            
+            RemoteImage(urlString: selectedAppetizer.imageURL)
                 .scaledToFill()
                 .frame(height: 220)
+                .padding(.vertical, 10)
+                .offset(y: 10)
                 .clipped()
             
             AppetizersTextDetails(appetizer: selectedAppetizer)

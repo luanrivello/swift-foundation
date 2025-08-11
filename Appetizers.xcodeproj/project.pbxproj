@@ -22,6 +22,7 @@
 		6F5219012E3F9F78000EFBAB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5219002E3F9F78000EFBAB /* RemoteImage.swift */; };
 		6F7FFA762E3CDD7400F0062E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */; };
 		6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FFA772E3CDF6800F0062E /* APIError.swift */; };
+		6F8FCDA12E48DC8F0048B2E9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8FCDA02E48DC8F0048B2E9 /* Logger.swift */; };
 		6FB173582E38DB5C0043F480 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173572E38DB5C0043F480 /* AppMain.swift */; };
 		6FB1735A2E38DB5C0043F480 /* AppetizerTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */; };
 		6FB1735C2E38DB5F0043F480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB1735B2E38DB5F0043F480 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		6F5219002E3F9F78000EFBAB /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		6F7FFA752E3CDD7400F0062E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6F7FFA772E3CDF6800F0062E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		6F8FCDA02E48DC8F0048B2E9 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		6FB173542E38DB5C0043F480 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB173572E38DB5C0043F480 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		6FB173592E38DB5C0043F480 /* AppetizerTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabsView.swift; sourceTree = "<group>"; };
@@ -129,8 +131,8 @@
 		6F205BC42E43FDBE00F8CF45 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				6F205BC52E43FDD200F8CF45 /* ConfirmButton.swift */,
-				6F205BC72E4404A600F8CF45 /* XCloseButton.swift */,
+				6F5219072E3FF16F000EFBAB /* Models */,
+				6F8FCDA22E48E0FD0048B2E9 /* Views */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -174,19 +176,19 @@
 			isa = PBXGroup;
 			children = (
 				6F5219082E3FF188000EFBAB /* NetworkModels */,
-				6F5219072E3FF16F000EFBAB /* Commons */,
 				6FEDBDE92E393D1000AF3698 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		6F5219072E3FF16F000EFBAB /* Commons */ = {
+		6F5219072E3FF16F000EFBAB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6F5218D42E3ECB6C000EFBAB /* LoadingView.swift */,
 				6F5218D02E3EBF7A000EFBAB /* Alert.swift */,
+				6F8FCDA02E48DC8F0048B2E9 /* Logger.swift */,
 			);
-			path = Commons;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6F5219082E3FF188000EFBAB /* NetworkModels */ = {
@@ -208,6 +210,15 @@
 				6F205BE02E47C6AF00F8CF45 /* Order.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6F8FCDA22E48E0FD0048B2E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F205BC52E43FDD200F8CF45 /* ConfirmButton.swift */,
+				6F205BC72E4404A600F8CF45 /* XCloseButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6FB1734B2E38DB5B0043F480 = {
@@ -417,6 +428,7 @@
 				6F205BC62E43FDD200F8CF45 /* ConfirmButton.swift in Sources */,
 				6FB1735A2E38DB5C0043F480 /* AppetizerTabsView.swift in Sources */,
 				6F5219012E3F9F78000EFBAB /* RemoteImage.swift in Sources */,
+				6F8FCDA12E48DC8F0048B2E9 /* Logger.swift in Sources */,
 				6F205BCC2E45590E00F8CF45 /* AccountViewModel.swift in Sources */,
 				6F7FFA782E3CDF6800F0062E /* APIError.swift in Sources */,
 				6F5218D32E3EC88A000EFBAB /* Color+Extensions.swift in Sources */,
