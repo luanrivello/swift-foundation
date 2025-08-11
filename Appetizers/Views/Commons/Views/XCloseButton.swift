@@ -19,7 +19,10 @@ struct XCloseButton: View {
                     .frame(width: 30, height: 30)
                     .opacity(0.7)
                 Image(systemName: "xmark")
+                    .resizable()
+                    .scaledToFit()
                     .foregroundColor(.black)
+                    .frame(width: 12, height: 12)
             }
             .padding(10)
         }

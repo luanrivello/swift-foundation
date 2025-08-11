@@ -17,7 +17,7 @@ final class NetworkManager {
     
     func getAppetizers(completed: @escaping (Result<[Appetizer], APIError>) -> Void) {
         guard let appetizersURL = URL(string: baseURL + appetizersPath) else {
-            print("NetworkManager Error: \(APIError.invalidURL)")
+            loggerNetworkManager.error("NetworkManager [Error]: \(APIError.invalidURL.localizedDescription, privacy: .public)")
             completed(.failure(.invalidURL))
             return
         }
@@ -56,7 +56,8 @@ final class NetworkManager {
                 completed(.success(decodedData.appetizers))
             } catch {
                 self.handleNetworkManagerError(errorOfType: .invalidJson)
-                print(String(data: data, encoding: .utf8) ?? "NetworkManager: Unable to convert data to string")
+                let dataString = String(data: data, encoding: .utf8) ?? "Unable to convert data to string"
+                loggerNetworkManager.error("Failed to decode JSON: \(dataString, privacy: .public)")
                 completed(.failure(.invalidJson))
             }
         }
@@ -65,29 +66,37 @@ final class NetworkManager {
     }
     
     private func handleNetworkManagerError(errorOfType: APIError) {
-        print("NetworkManager Error: \(errorOfType)")
+        loggerNetworkManager.error("NetworkManager [Error]: \(errorOfType.localizedDescription, privacy: .public)")
     }
     
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
         
         let cacheKey = NSString(string: urlString)
         if let image = NetworkManager.cache.object(forKey: cacheKey) {
+            loggerNetworkManager.log("\(urlString, privacy: .public): cached image found.")
             completed(image)
+            return
         }
         
         guard let url = URL(string: urlString) else {
+            loggerNetworkManager.error("\(urlString, privacy: .public): invalid url!")
             completed(nil)
             return
         }
         
-        
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            loggerNetworkManager.log("\(urlString, privacy: .public): request done.")
+            
             guard let data = data, let image = UIImage(data: data) else {
+                loggerNetworkManager.error("\(urlString, privacy: .public): no data or failed to create image!")
                 completed(nil)
                 return
             }
             
+            loggerNetworkManager.log("\(urlString, privacy: .public): set cached image")
             NetworkManager.cache.setObject(image, forKey: cacheKey)
+            
+            completed(image)
         }
         
         task.resume()
