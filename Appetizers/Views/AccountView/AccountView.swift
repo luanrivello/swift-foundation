@@ -21,6 +21,8 @@ struct AccountView: View {
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                     DatePicker("Birthday", selection: $viewModel.user.birthday, displayedComponents: .date)
+                        .datePickerStyle(.compact)
+                        .accessibilityIdentifier("birthdayPicker")
                     
                     Button {
                         viewModel.saveChanges()
@@ -32,7 +34,7 @@ struct AccountView: View {
                 
                 Section(header: Text("Special Conditions")) {
                     Toggle("Lactose Intolerance", isOn: $viewModel.user.isLactoseIntolerant)
-                    Toggle("Ciliac Disease", isOn: $viewModel.user.isCiliac)
+                    Toggle("Ciliac Disease", isOn: $viewModel.user.isCeliac)
                     Toggle("Diabetic", isOn: $viewModel.user.isDiabetic)
                 }
                 .toggleStyle(SwitchToggleStyle(tint: .brandSecondary))

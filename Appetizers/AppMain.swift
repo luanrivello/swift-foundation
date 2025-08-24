@@ -11,6 +11,15 @@ import SwiftUI
 struct AppMain: App {
     var order = Order()
     
+    init() {
+        if CommandLine.arguments.contains("UITest_ResetUserDefaults") {
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            print("UI Test: Cleared UserDefaults")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             AppetizerTabsView().environmentObject(order)

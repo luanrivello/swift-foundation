@@ -14,9 +14,7 @@ struct AppetizersDetailsView: View {
     @Binding var isShowingDetails: Bool
     
     var body: some View {
-        
         VStack {
-            
             RemoteImage(urlString: selectedAppetizer.imageURL)
                 .scaledToFill()
                 .frame(height: 220)
@@ -39,6 +37,7 @@ struct AppetizersDetailsView: View {
                     isShowingDetails = false
                 }
             )
+            .accessibilityIdentifier("addToOrderButton")
         }
         .frame(width: 300, height: 525)
         .background(Color(.systemBackground))
